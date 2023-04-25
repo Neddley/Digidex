@@ -24,18 +24,20 @@ const renderDigimonData = (response) => {
 	console.log(response);
 	let objt = response[0];
 	console.log(objt);
-	const name = objt.name;
+	const name1 = objt.name;
+	console.log(name)
     const sprite =  objt.img;
-    const level = objt.level;
+    const level1 = objt.level;
+	console.log(level)
 
-    name.textContent = name;
+    name.innerHTML = name1.toUpperCase();
     img.setAttribute('src', sprite);
-	level.textContent = level;
+	level.innerHTML = level1.toUpperCase();
 };
 
 const renderNotFound = (error) => {
-    name.textContent = 'UNKNOWN2 '+ error;
+    name.innerHTML = 'UNKNOWN';
     img.setAttribute('src', '/assets/img/unknownEntity.png');
-    level.textContent = 'UNKNOWN2' ;
+    level.innerHTML = 'UNKNOWN' ;
 };
 
