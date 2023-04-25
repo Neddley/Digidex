@@ -1,7 +1,14 @@
 const name = document.getElementById("name");
 const level = document.getElementById("level");
 const img = document.getElementById("img");
-const nameArray = []
+const imgA1 = document.getElementById("img-another1");
+const imgA2 = document.getElementById("img-another2");
+const imgA3 = document.getElementById("img-another3");
+const nameArray = [];
+
+let array = [0,1,2,3]
+
+console.log(array[3])
 
 fetch("https://digimon-api.vercel.app/api/digimon/", {
   method: "GET",
@@ -10,11 +17,36 @@ fetch("https://digimon-api.vercel.app/api/digimon/", {
   },
 })
   .then((resp) => resp.json())
-  .then((resp) => resp.forEach(element => {
-	const newName = element.name;
-    nameArray.push(newName);
-    console.log(nameArray);
-  }))
+  .then((resp) =>
+    resp.forEach((element) => {
+      const newName = element.name;
+      nameArray.push(newName);
+    })
+  );
+
+function Randomnazer() {
+  let dato1,
+    dato2,
+    dato3 = 0;
+  dato1 = Math.floor(Math.random() * 209);
+  dato2 = Math.floor(Math.random() * 209);
+  dato3 = Math.floor(Math.random() * 209);
+  return [dato1, dato2, dato3];
+}
+
+function nameGiver(arr, num){
+  let dato1, dato2, dato3 = ""
+  console.log(arr)
+  console.log(arr[0])
+  console.log(num[0])
+  dato1 = arr[num[0]]
+  dato2 = arr[num[1]]
+  dato3 = arr[num[2]]
+  console.log(dato1, dato2, dato3)
+}
+
+anothers = Randomnazer();
+names = nameGiver(nameArray,anothers)
 
 const searchDigimon = (event) => {
   event.preventDefault();
