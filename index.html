@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<title></title>
-</head>
-<body>
-	<nav id="nav-container">
-		<div id="nav-img">
-			<img src="assets/img/digivice.jpg">
-		</div>
-		<div id="nav-text">ULTIMATE<br> DIGIDEX
-		</div>
-	</nav>
-	<main>
-		<div id="main-container">
-			<div id="data-container">
-				<div id="data-img">
-					<img src="assets/img/unknownEntity.png">
-				</div>
-				<div id="data-name">
-					<p>NAME:</p>
-					<p id="name">UNKNOWN</p>
-				</div>
-				<div id="data-level">
-					<p>LEVEL:</p>
-					<p id="level">UNKNOWN</p>
-				</div>
-			</div>
-			<div id="input-container">
-				<div>
-					<div id="input-name" class="input">
-						<input id="digi-name" type="text" required autocomplete="off">
-						<label for="digi-name">Digi-Search</label>
-					</div>				
-					<div id="input-button">
-						<button id="submit">Send</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="aside-nav">
-			<div id="aside-border">
-				<div id="another1" class="aside-img">
-					<a href="">
-						<img src="">
-					</a>
-				</div>
-				<div id="another2" class="aside-img">
-					<a href="">
-						<img src="">
-					</a>
-				</div>
-				<div id="another3" class="aside-img">
-					<a href="">
-						<img src="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</main>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title></title>
+  </head>
+  <body>
+    <nav id="nav-container">
+      <div id="nav-img">
+        <img src="assets/img/digivice.jpg" />
+      </div>
+      <div id="nav-text">
+        ULTIMATE<br />
+        DIGIDEX
+      </div>
+    </nav>
+    <main>
+      <div id="main-container">
+        <div id="data-container">
+          <div id="data-img">
+            <img id="img" src="assets/img/unknownEntity.png" />
+          </div>
+          <div id="data-name">
+            <p>NAME:</p>
+            <p id="name">UNKNOWN</p>
+          </div>
+          <div id="data-level">
+            <p>LEVEL:</p>
+            <p id="level">UNKNOWN</p>
+          </div>
+        </div>
+        <div id="input-container">
+          <form action="" onsubmit="searchDigimon(event)">
+            <div id="input-name" class="input">
+              <input id="digi-name" name="digimon" type="text" required autocomplete="off" />
+              <label for="digi-name">Digi-Search</label>
+            </div>
+            <div id="input-button">
+              <button id="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="aside-nav">
+        <div id="aside-border">
+          <div id="another1" class="aside-img">
+            <a href="">
+              <img src="" />
+            </a>
+          </div>
+          <div id="another2" class="aside-img">
+            <a href="">
+              <img src="" />
+            </a>
+          </div>
+          <div id="another3" class="aside-img">
+            <a href="">
+              <img src="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
 </html>
