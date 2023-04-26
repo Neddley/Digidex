@@ -6,10 +6,6 @@ const imgA2 = document.getElementById("img-another2");
 const imgA3 = document.getElementById("img-another3");
 const nameArray = [];
 
-let array = [0,1,2,3]
-
-console.log(array[3])
-
 fetch("https://digimon-api.vercel.app/api/digimon/", {
   method: "GET",
   headers: {
@@ -35,14 +31,15 @@ function Randomnazer() {
 }
 
 function nameGiver(arr, num){
-  let dato1, dato2, dato3 = ""
-  console.log(arr)
-  console.log(arr[0])
-  console.log(num[0])
+  let dato1, dato2, dato3 = "";
+  console.log('arr: ', arr);
+  console.log(Array.isArray(arr))
+  console.log(typeof(arr))
+  /*
   dato1 = arr[num[0]]
   dato2 = arr[num[1]]
   dato3 = arr[num[2]]
-  console.log(dato1, dato2, dato3)
+  console.log(dato1, dato2, dato3)*/
 }
 
 anothers = Randomnazer();
