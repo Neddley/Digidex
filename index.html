@@ -13,6 +13,7 @@
     <title></title>
   </head>
   <body>
+    
     <nav id="nav-container">
       <div id="nav-img">
         <img src="assets/img/digivice.jpg" />
@@ -23,10 +24,18 @@
       </div>
     </nav>
     <main>
+      <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()">&times;</div>
+          <h3 id="popup-name">UNKNOWN</h3>
+          <img id="popup-img" src="assets/img/unknownEntity.png" alt="">
+        </div>
+      </div>
       <div id="main-container">
         <div id="data-container">
-          <div id="data-img">
-            <img id="img" src="assets/img/unknownEntity.png" />
+          <div id="data-img" onclick="togglePopup()" style="cursor: pointer;">
+            <img id="img" src="assets/img/unknownEntity.png"/>
           </div>
           <div id="data-name">
             <p>NAME:</p>
@@ -40,7 +49,13 @@
         <div id="input-container">
           <form action="" onsubmit="searchDigimon(event)">
             <div id="input-name" class="input">
-              <input id="digi-name" name="digimon" type="text" required autocomplete="off" />
+              <input
+                id="digi-name"
+                name="digimon"
+                type="text"
+                required
+                autocomplete="off"
+              />
               <label for="digi-name">Digi-Search</label>
             </div>
             <div id="input-button">
@@ -49,7 +64,7 @@
           </form>
         </div>
       </div>
-      <div id="aside-nav" style="display: none;">
+      <div id="aside-nav" style="display: none">
         <div id="aside-border">
           <div id="another1" class="aside-img">
             <a href="">
@@ -69,6 +84,28 @@
         </div>
       </div>
     </main>
+    <aside>
+      <div>
+        <table class="table-container">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Name</th>
+              <th scope="col">Img</th>
+              <th scope="col">Level</th>
+            </tr>
+          </thead>
+          <tbody id="contenido">
+            <tr>
+              <th scope="row"></th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </aside>
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
